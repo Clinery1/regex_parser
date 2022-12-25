@@ -21,7 +21,7 @@ use std::{
 macro_rules! syntax {
     {type Out=$t:ty;$($other:tt)*}=>{
         {
-            let mut pats=Patterns::<$t>::new();
+            let mut pats=$crate::Patterns::<$t>::new();
             $crate::syntax_inner!(pats,$($other)*);
             pats
         }

@@ -34,7 +34,7 @@ macro_rules! syntax_inner {
         $crate::syntax_inner!($pats,$($end)*);
     };
     ($pats:expr,$name:literal=>$first:literal$(,$extra:literal)* => $fold:expr;$($end:tt)*)=>{
-        $pats.sequence($name,[$first $(,$extra)+],&$fold);
+        $pats.sequence($name,[$first $(,$extra)*],&$fold);
         $crate::syntax_inner!($pats,$($end)*);
     };
     ($pats:expr,$name:literal=>$first:literal* => $fold:expr;$($end:tt)*)=>{

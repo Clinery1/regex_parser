@@ -1,0 +1,7 @@
+let x = 5
+let y = 6
+let z = 7
+
+
+x=5
+a_variable_with_a_long_name = 10
